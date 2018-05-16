@@ -1,5 +1,7 @@
 package basis;
 
+import edu.princeton.cs.algs4.StdDraw;
+
 public class Practice {
     public static void IfEqual(int a, int b, int c) {
         if (a == b && b == c) {
@@ -18,17 +20,22 @@ public class Practice {
         }
     }
 
+//    public static double binomial(int N, int k, double p) {
+//        if (N == 0 && k == 0) return 1.0;
+//        if (N < 0 || k < 0) return 0.0;
+//        return (1.0 - p) * binomial(N - 1, k, p) + p * binomial(N - 1, k - 1, p);
+//    }
+
     public static void main(String[] args) {
-        IfEqual(1, 2, 3);
-        IfEqual(1, 1, 1);
-        CheckDouble(1.225);
-        CheckDouble(0.12345);
-        int f = 0;
-        int g = 1;
-        for (int i = 0; i <= 15; i++) {
-            System.out.println(f);
-            f = f + g;
-            g = f - g;
+        int N=100;
+        StdDraw.setXscale(0,N);
+        StdDraw.setYscale(0,N*N);
+        StdDraw.setPenRadius(.01);
+        for (int i=1;i<=N;i++)
+        {
+            StdDraw.point(i,i);
+            StdDraw.point(i,i*i);
+            StdDraw.point(i,i*Math.log(i));
         }
     }
 }
