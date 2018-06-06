@@ -20,7 +20,7 @@ public class StaticSETofInts {
         while (lo<hi)
         {
             int mid = lo+(hi-lo)/2;
-            if(k<a[mid]) hi=mid-1;
+            if(key<a[mid]) hi=mid-1;
             else if (key>a[mid]) lo=mid+1;
             else return mid;
         }
