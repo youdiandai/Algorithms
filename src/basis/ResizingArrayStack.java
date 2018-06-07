@@ -1,6 +1,6 @@
 package basis;
 import java.util.Iterator;
-
+//一种能够自动调整大小的栈
 public class ResizingArrayStack<Item> implements Iterable<Item> {
     private int N=0;
     private Item[] a=(Item[]) new Object[1];
@@ -8,7 +8,7 @@ public class ResizingArrayStack<Item> implements Iterable<Item> {
     public int size(){return N;}
     private void resize(int max)
     {
-        Item[] temp = (Item[]) new Object[];
+        Item[] temp = (Item[]) new Object[max];
         for(int i=0;i<N;i++)
         {
             temp[i]=a[i];
