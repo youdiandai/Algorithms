@@ -1,6 +1,6 @@
 package basis;
 import java.util.Iterator;
-//一种能够自动调整大小的栈
+//一种能够自动调整大小的链栈
 public class ResizingArrayStack<Item> implements Iterable<Item> {
     private int N=0;
     private Item[] a=(Item[]) new Object[1];
