@@ -1,5 +1,6 @@
 package basis;
 import java.util.Iterator;
+//使用链表实现的栈
 public class LinkListStack<Item> implements Iterable<Item>{
     class Node
     {
@@ -31,7 +32,7 @@ public class LinkListStack<Item> implements Iterable<Item>{
     public class LinkListStackIterator implements Iterator<Item>
     {
         private Node current = first;
-        public boolean hasNext(){ return current !=null}
+        public boolean hasNext(){ return current !=null;}
         public Item next()
         {
             Item item = current.item;
