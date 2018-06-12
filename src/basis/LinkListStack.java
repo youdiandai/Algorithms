@@ -1,5 +1,7 @@
 package basis;
 import java.util.Iterator;
+import java.util.NoSuchElementException;
+
 //使用链表实现的栈
 public class LinkListStack<Item> implements Iterable<Item>{
     class Node
@@ -27,6 +29,11 @@ public class LinkListStack<Item> implements Iterable<Item>{
         this.first = this.first.next;
         N--;
         return a;
+    }
+    public Item peek()
+    {
+        if (isEmpty()) throw new NoSuchElementException("Stack underflow");
+        return first.item;
     }
     public Iterator<Item> iterator(){return  new LinkListStackIterator();}
     public class LinkListStackIterator implements Iterator<Item>
